@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A modern rule-based chatbot built for the CodSoft AI internship Task 1." />
+  <title>AmanBot | Rule-Based Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <main class="app-shell">
+    <aside class="intro-panel">
+      <div class="brand">
+        <div class="brand-mark">A<span>•</span></div>
+        <span>Aman<span class="brand-light">Bot</span></span>
+      </div>
+      <div class="intro-copy">
+        <div class="eyebrow"><span class="live-dot"></span> CODSOFT AI · TASK 01</div>
+        <h1>A little chat.<br /><span>A lot of help.</span></h1>
+        <p>A friendly rule-based chatbot that responds to greetings, questions, and simple everyday prompts.</p>
+        <div class="feature-list">
+          <div class="feature"><span class="feature-icon">✦</span><div><strong>Instant responses</strong><small>Predefined rules, quick replies</small></div></div>
+          <div class="feature"><span class="feature-icon">⌘</span><div><strong>Simple by design</strong><small>HTML, CSS and JavaScript</small></div></div>
+          <div class="feature"><span class="feature-icon">↗</span><div><strong>Always learning</strong><small>Add new rules in seconds</small></div></div>
+        </div>
+      </div>
+      <div class="intro-footer"><span class="footer-spark">✳</span> Built as a learning project <span class="footer-separator">/</span> 2026</div>
+    </aside>
+
+    <section class="chat-panel" aria-label="Chatbot">
+      <header class="chat-header">
+        <div class="bot-avatar"><span>✦</span><i></i></div>
+        <div class="bot-heading"><h2>AmanBot</h2><p><span class="status-dot"></span> Online · Rule-based assistant</p></div>
+        <button class="icon-button" id="clearChat" title="Clear chat" aria-label="Clear chat">↻</button>
+        <button class="icon-button more-button" id="aboutBot" title="About AmanBot" aria-label="About AmanBot">···</button>
+      </header>
+
+      <div class="chat-context"><span class="context-lock">✧</span> This demo uses predefined rules, not a live AI model.</div>
+
+      <div class="messages" id="messages" aria-live="polite">
+        <div class="day-divider"><span>TODAY</span></div>
+        <div class="message-row bot-row">
+          <div class="mini-avatar">✦</div>
+          <div class="message-content">
+            <div class="message-bubble">Hey there! 👋 I’m <strong>AmanBot</strong>.<br />Ask me something, or choose a suggestion below to get started.</div>
+            <time>Just now</time>
+          </div>
+        </div>
+      </div>
+
+      <div class="suggestions" id="suggestions">
+        <button class="suggestion-chip" data-message="What is your name?">Who are you? <span>↗</span></button>
+        <button class="suggestion-chip" data-message="Tell me a joke">Tell me a joke <span>↗</span></button>
+        <button class="suggestion-chip" data-message="What can you do?">What can you do? <span>↗</span></button>
+      </div>
+
+      <form class="composer" id="chatForm">
+        <button class="composer-plus" type="button" id="helpButton" title="Show example prompts" aria-label="Show example prompts">＋</button>
+        <label class="sr-only" for="userInput">Type your message</label>
+        <input id="userInput" type="text" placeholder="Write a message..." autocomplete="off" maxlength="500" />
+        <span class="composer-hint">↵</span>
+        <button class="send-button" type="submit" aria-label="Send message"><span>➤</span></button>
+      </form>
+      <div class="composer-note">AmanBot can make mistakes because it follows fixed rules. <span>Made for learning.</span></div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
